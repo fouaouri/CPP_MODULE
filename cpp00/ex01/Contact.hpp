@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 19:42:03 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/22 15:30:37 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:44:30 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,35 +22,17 @@ class Contact{
         std::string  DarketsSec;
     public :
     //getter
-        std::string getFirstName(){
-            return FirstName;
-        }
-        std::string getLastName(){
-            return LastName;
-        }
-        std::string getNickName(){
-            return NickName;
-        }
-        std::string getPhoneNumber(){
-            return PhoneNumber;
-        }
-        std::string getDarketsSec(){
-            return DarketsSec;
-        }
+        std::string getFirstName();
+        std::string getLastName();   
+        std::string getNickName();        
+        std::string getPhoneNumber();       
+        std::string getDarketsSec();
     //setter
-        void setFirstName(std::string newFirstName){
-            FirstName = newFirstName;
-        }
-        void setLastName(std::string newLastName){
-            LastName = newLastName;
-        }
-        void setNickName(std::string newNickName){
-            NickName = newNickName;
-        }
-        void setPhoneNumber(std::string newPhoneNumber){
-            PhoneNumber = newPhoneNumber;
-        }
-        void setDarketsSec(std::string newDarketsSec){
-            DarketsSec = newDarketsSec;
-        }
+        void setFirstName(std::string newFirstName);
+        void setLastName(std::string newLastName);        
+        void setNickName(std::string newNickName);       
+        void setPhoneNumber(std::string newPhoneNumber);
+        void setDarketsSec(std::string newDarketsSec);       
+        void    set_len0(int index);
+        void    set_len(int index);
 };

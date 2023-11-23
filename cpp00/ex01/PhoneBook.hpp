@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 19:42:09 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:25 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:40:26 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook{
@@ -23,4 +24,6 @@ class PhoneBook{
         ~ PhoneBook(){
             std::cout << "End of program ." << std::endl;
         };
+        void    start_the_program();
+        void    checking();
 };

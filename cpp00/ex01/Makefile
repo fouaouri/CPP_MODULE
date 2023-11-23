@@ -1,4 +1,4 @@
-src = main.cpp
+src = main.cpp PhoneBook.cpp Contact.cpp
 
 O_files = $(src:.cpp=.o)
 CFLAGS = -Wall -Wextra -Werror -std=c++98

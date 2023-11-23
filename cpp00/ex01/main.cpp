@@ -6,47 +6,67 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:24:29 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/22 15:30:04 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:54:41 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-void checking()
-{
-     if(std::cin.eof())
-        return;
-}
 
 int main()
 {
     PhoneBook c1;
     std::string input;
     std::string num;
-    std::string phnum;
-    int n = 0;
-    int i = 0;
+    std::string Fname;
+    std::string Lname;
+    std::string Nname;
+    std::string Phnum;
+    std::string Dsecret;
+    int n = 1;
+    int i = 1;
     std::string phoneNumber;
+    c1.start_the_program();
     for(;;)
     {
         std::cout << "Enter an action : ";
         getline(std::cin, input);
-        checking();
+        c1.checking();
         if(strcmp(input.c_str(), "ADD") == 0)
         {
-            std::cout << "Enter a number : ";
-            getline(std::cin, phnum);
-            c1.contact[i % 8].setFirstName(phnum);
-            i++;
+            std::cout << "Enter the first name : ";
+            getline(std::cin, Fname);
+            c1.contact[i % 8].setFirstName(Fname);
+            std::cout << "Enter the last name : ";
+            getline(std::cin, Lname);
+            c1.contact[i % 8].setLastName(Lname);
+            std::cout << "Enter the nickname : ";
+            getline(std::cin, Nname);
+            c1.contact[i % 8].setNickName(Nname);
+            std::cout << "Enter the phone number : ";
+            getline(std::cin, Phnum);
+            c1.contact[i % 8].setPhoneNumber(Phnum);
+            std::cout << "Enter the darkest secret : ";
+            getline(std::cin, Dsecret);
+            c1.contact[i % 8].setDarketsSec(Dsecret);
+            i += 1;
         }
         else if (strcmp(input.c_str(), "SEARCH") == 0)
         {
-            std::cout << "I want the number number : ";
+            int j;
+            for (j = 1; j < i; j++)
+                c1.contact[j % 8].set_len0(j);
+            std::cout << "Which index u choose : ";
             getline(std::cin, num);
             n = atoi(num.c_str());
-            std::cout << "the number u want is : " << phnum << std::endl;
+            if (n > j)
+                std::cout << "OOOOOPS! the number u choose doses not exist .. try again" << std::endl;
+            else
+                c1.contact[n % 8].set_len(n);
         }
         else if (strcmp(input.c_str(), "EXIT") == 0)
             exit (0);
+        else
+            std::cout << "* INCORRECT INPUT ! TRY AGAIN *" << std::endl;
     }
     return (0);
 }

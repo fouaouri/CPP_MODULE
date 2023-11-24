@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 19:42:09 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/23 17:40:26 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/24 09:57:23 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class PhoneBook{
             std::cout << "End of program ." << std::endl;
         };
         void    start_the_program();
-        void    checking();
+        // void    checking(int a);
 };

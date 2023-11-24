@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:49:32 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/23 17:42:46 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:32:53 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void Contact::setNickName(std::string newNickName){
 }
 		
 void Contact::setPhoneNumber(std::string newPhoneNumber){
-	PhoneNumber = newPhoneNumber;
+	PhoneNumber = newPhoneNumber;	
 }
 
 void Contact::setDarketsSec(std::string newDarketsSec){

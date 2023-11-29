@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   zomvieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 14:56:01 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 14:56:03 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/11/28 13:44:59 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/11/28 14:45:24 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
 
-int main(int ac, char **av)
+void    Zombie::getName(Zombie z, std::string name)
 {
-    int i, j;
-    if (ac >= 2)
+    this->name = name;
+    z = Zombie(name);
+}
+
+Zombie* zombieHorde( int N, std::string name )
+{
+    Zombie *zombie;
+    int i;
+        zombie = new Zombie[N];
+    for(i = 0; i < N; i++)
     {
-        for(i = 1; av[i]; i++)
-        {
-            j = 0;
-            for(j = 0; av[i][j]; j++)
-                std::cout << (char)toupper(av[i][j]);
-        }
+        zombie->getName(zombie[i], name);
+        zombie->announce();
     }
-    else
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    return(0);
+    return zombie;
 }

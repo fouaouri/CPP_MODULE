@@ -1,17 +1,13 @@
-src = megaphone.cpp
-
+src = main.cpp
 O_files = $(src:.cpp=.o)
-
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-
-NAME = megaphone
-
-
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+NAME = Brain
 
 all: $(NAME)
 
 $(NAME) : $(O_files)
-	c++  $(CFLAGS) $(O_files) -o $(NAME)
+	c++  $(CXXFLAGS) $(O_files) -o $(NAME)
 clean : 
 	rm -rf $(O_files)
 

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 14:56:01 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 14:56:03 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/11/28 13:44:55 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/11/28 13:55:16 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
 
-int main(int ac, char **av)
+
+Zombie::Zombie(std::string n){
+    this->name = n;
+	std::cout << n << " was created ." << std::endl;
+}
+
+void Zombie::announce( void ){
+	std::cout << this->name << ":  BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+Zombie::~Zombie(void)
 {
-    int i, j;
-    if (ac >= 2)
-    {
-        for(i = 1; av[i]; i++)
-        {
-            j = 0;
-            for(j = 0; av[i][j]; j++)
-                std::cout << (char)toupper(av[i][j]);
-        }
-    }
-    else
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    return(0);
+    
+}
+
+Zombie::Zombie(void)
+{
+    
 }

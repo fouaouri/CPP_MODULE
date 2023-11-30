@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:20:38 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/29 19:49:37 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/11/30 11:55:13 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 #include <iostream>
 #include <cstring>
-
+#include "Weapon.hpp"
+class Weapon;
 class HumanA{
     private :
-        std::string Weapon;
         std::string name;
+        Weapon& gun;
+        
     public :
         void attack(void);
         HumanA(void);
-        HumanA(std::string name, Weapon club);
+        HumanA(std::string n, Weapon &club);
         ~HumanA(void);
 };

@@ -1,8 +1,8 @@
-src = main.cpp HumanA.cpp Weapon.cpp HumanB.cpp
+src = main.cpp
 O_files = $(src:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CXX = c++
-NAME = Weapon
+NAME = Replace
 
 all: $(NAME)
 

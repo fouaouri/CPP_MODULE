@@ -1,16 +1,13 @@
 src = main.cpp PhoneBook.cpp Contact.cpp
-
 O_files = $(src:.cpp=.o)
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
 NAME = PhoneBook
-
-
 
 all: $(NAME)
 
 $(NAME) : $(O_files)
-	c++  $(CFLAGS) $(O_files) -o $(NAME)
+	c++  $(CXXFLAGS) $(O_files) -o $(NAME)
 clean : 
 	rm -rf $(O_files)
 

@@ -1,11 +1,8 @@
-src = megaphone.cpp
-
+src = main.cpp Fixed.cpp
 O_files = $(src:.cpp=.o)
-
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = 
 CXX = c++
-
-NAME = megaphone
+NAME = Fixed
 
 all: $(NAME)
 

@@ -1,14 +1,13 @@
-src = megaphone.cpp
+src = main.cpp Harl.cpp 
+
 
 O_files = $(src:.cpp=.o)
-
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 
 CXX = c++
-
-NAME = megaphone
+NAME = Harl
 
 all: $(NAME)
-
+	
 $(NAME) : $(O_files)
 	c++  $(CXXFLAGS) $(O_files) -o $(NAME)
 clean : 

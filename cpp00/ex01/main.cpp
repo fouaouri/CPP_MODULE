@@ -6,17 +6,17 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:24:29 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 14:46:12 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/03 21:09:22 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-
+ 
 int main()
 {
 	PhoneBook c1;
 	std::string input, num, Fname, Lname, Nname, Phnum, Dsecret;
-	int n = 1, i = 1;
+	size_t n = 1, i = 1;
 	c1.start_the_program();
 	for (;;)
 	{
@@ -28,7 +28,7 @@ int main()
 		else if (strcmp(input.c_str(), "ADD") == 0)
 		{
 			if (std::cin.eof())
-				return 0;
+				exit(0);
 			else
 			{
 				std::cout << "Enter the first name : ";
@@ -76,12 +76,16 @@ int main()
 		}
 		else if (strcmp(input.c_str(), "SEARCH") == 0)
 		{
-			int j;
-			int k;
+			size_t j;
+			size_t k;
 			if (i > 8)
 				k = 9;
 			else
 				k = i;
+			std::cout << std::setw(10) << "index" << " |";
+			std::cout << std::setw(10) << "FirstName" << " |";
+			std::cout << std::setw(10) << "LastName" << " |";
+			std::cout << std::setw(10) << "NickName" << " |" << std::endl;
 			for (j = 1; j < k; j++)
 				c1.contact[j % 8].set_len0(j);
 			std::cout << "Which index u choose : ";
@@ -91,7 +95,7 @@ int main()
 				std::cout << "* OOOOOPS! Your option does not exist .. try again *" << std::endl;
 				continue;
 			}
-			n = atoi(num.c_str());
+			n = std::atoi(num.c_str());
 			if (n <= 0 || n >= j)
 				std::cout << "* OOOOOPS! the number u choose doses not exist .. try again *" << std::endl;
 			else

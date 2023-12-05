@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 19:42:09 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 16:14:48 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/01 16:49:15 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/01 21:44:55 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 #include <iostream>
 #include <cstring>
-#include <iomanip>
-#include <cstdlib> 
-#include "Contact.hpp"
 
-class PhoneBook{
-    public :
-        Contact contact[8];
-        ~ PhoneBook(){
-            std::cout << "End of program ." << std::endl;
-        };
-        void    start_the_program();
-        int check_num(std::string str);
-        int is_space(std::string str);
+class Harl{
+    private :
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
+    public:
+        void complain(std::string level);
 };

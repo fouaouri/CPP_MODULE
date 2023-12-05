@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 19:42:09 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 16:14:48 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/04 12:12:18 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/04 15:42:37 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <cstring>
-#include <iomanip>
-#include <cstdlib> 
-#include "Contact.hpp"
 
-class PhoneBook{
+class Fixed{
+    private :
+        int                 store;
+        static const int    integer = 8;
     public :
-        Contact contact[8];
-        ~ PhoneBook(){
-            std::cout << "End of program ." << std::endl;
-        };
-        void    start_the_program();
-        int check_num(std::string str);
-        int is_space(std::string str);
+        Fixed();
+        Fixed(const Fixed& copy);
+        Fixed & operator=(const Fixed& operat);
+        ~Fixed();
+        int getRawBits( void ) const;
+        void setRawBits( int const raw );
 };

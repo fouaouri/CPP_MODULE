@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:48:21 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 14:45:26 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/03 21:08:35 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,19 @@ void Contact::set_len0(int index)
 {
 	if (index > 8)
 		index = 8;
-	std::cout << std::setw(10) << index << "|";
+	std::cout << std::setw(10) << index << " |";
 	if (getFirstName().length() > 10)
 		std::cout << std::setw(10) << getFirstName().substr(0, 9) << ".|";
 	else
-		std::cout << std::setw(10) << getFirstName() << "|";
+		std::cout << std::setw(10) << getFirstName() << " |";
 	if (getLastName().length() > 10)
 		std::cout << std::setw(10) << getLastName().substr(0, 9) << ".|";
 	else
-		std::cout << std::setw(10) << getLastName() << "|";
+		std::cout << std::setw(10) << getLastName() << " |";
 	if (getNickName().length() > 10)
 		std::cout << std::setw(10) << getNickName().substr(0, 9) << ".|";
 	else
-		std::cout << std::setw(10) << getNickName() << "|";
+		std::cout << std::setw(10) << getNickName() << " |";
 	std::cout << std::endl;
 }
 
@@ -55,9 +55,9 @@ void PhoneBook::start_the_program()
 
 int PhoneBook::check_num(std::string str)
 {
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 	{
-		if (str[i] >= '9' || str[i] <= '0')
+		if (!std::isdigit(str[i]))
 			return (1);
 	}
 	return (0);
@@ -65,10 +65,10 @@ int PhoneBook::check_num(std::string str)
 
 int PhoneBook::is_space(std::string str)
 {
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 	{
-		if ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
-			return (1);
+		if (!std::isspace(str[i]))
+			return (0);
 	}
-	return (0);
+	return (1);
 }

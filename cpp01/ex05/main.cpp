@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 19:42:09 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/26 16:14:48 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/01 16:49:44 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/01 21:38:51 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Harl.hpp"
 
-#include <iostream>
-#include <cstring>
-#include <iomanip>
-#include <cstdlib> 
-#include "Contact.hpp"
-
-class PhoneBook{
-    public :
-        Contact contact[8];
-        ~ PhoneBook(){
-            std::cout << "End of program ." << std::endl;
-        };
-        void    start_the_program();
-        int check_num(std::string str);
-        int is_space(std::string str);
-};
+int main(int ac, char **av)
+{
+    Harl H;
+    std::string a(av[1]);
+    if (ac == 2)
+        H.complain(a);
+    else
+        std::cout << "The number of arguments must be one!!" << std::endl;
+}

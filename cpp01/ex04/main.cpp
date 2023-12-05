@@ -6,57 +6,53 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:15:26 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/30 19:13:24 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/01 20:29:43 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
+//I need to add a header file ............
 
-std::string    replace(std::string s1, int start, int lenght, std::string s2)
+void replace(std::ifstream *file, std::ofstream *newFile, char **av)
 {
-    std::string replaced;
-    int i = 0;
-    for(;;)
-    {
-        if((size_t)start == std::string::npos)
-            break;
-        else
-        {
-            replaced.append(s2, i, i + start);
-            while(i < start)
-                i++;
-            i += lenght;
-            // while(start != lenght)
-            replaced.append(s2, start, lenght);
-        }
-    }
-    return (replaced);
+	std::string line;
+	std::string a(av[2]), b(av[3]);
+	while(std::getline(*file, line))
+	{
+		std::cout << "hello" << std::endl;
+		size_t pos = 0, i = 0;
+		while((pos = line.find(av[2], pos)) != std::string::npos)
+		{
+			while (i < pos)
+			*newFile << line[i++];
+			size_t j = 0;
+			while (j < b.length())
+				*newFile << b[j++];
+			i += a.length();
+			pos += a.length();
+		}
+		if((pos = line.find(av[2], pos)) == std::string::npos)
+		{
+			while(i < line.length())
+			*newFile << line[i++];
+		}
+		*newFile << std::endl;
+	}
 }
 
 int main(int ac, char **av)
 {
-    int i  = 0;
-    if (ac > 4)
-    {
-        std::ifstream  file(av[1]);
-        std::ofstream newFile("newfile.txt");
-        std::string a(av[2]);
-        std::string b(av[3]);
-        if(file.is_open())
-        {
-            while(!file.eof())
-            {
-                std::string line;
-                getline(file, line);
-                newFile.seekp(i);
-                line =  replace(a, line.find(a), a.length(), b);
-                i++;
-                newFile << line;
-            } 
-        }
-    }
-    else
-        std::cout << "The number of arguments must be three .. Try again!" << std::endl;
+	if (ac == 4)
+	{
+		std::ifstream  file(av[1]);
+		std::ofstream newFile("newfile.txt");
+		if(file.is_open() && newFile.is_open())
+			replace (&file, &newFile, av);
+		else
+			std::cout << "Failed to open the file." << std::endl;
+	}
+	else
+		std::cout << "The number of arguments must be three .. Try again!" << std::endl;
 }

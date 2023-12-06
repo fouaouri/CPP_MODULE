@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 15:38:51 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/06 13:18:49 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/06 13:11:28 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/06 14:56:29 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const int intgr) : store(intgr * pow(2, fractional))
     std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float floating) : store(floating * ( 1 << fractional ))
+Fixed::Fixed(const float floating) : store((int)( floating * ( 1 << fractional )))
 {
     std::cout << "Float constructor called" << std::endl;
 }
@@ -41,6 +41,7 @@ Fixed &Fixed::operator=( const Fixed &operat )
         this->store = operat.getRawBits();
     return *this;
 }
+
 
 Fixed::~Fixed()
 {
@@ -75,5 +76,55 @@ std::ostream & operator<<(std::ostream &output, const Fixed &operat)
 {
     output << operat.toFloat();
     return (output);
+}
+
+bool Fixed::operator>(const Fixed& operat) const
+{
+    return(this->getRawBits() > operat.getRawBits());
+}
+
+bool Fixed::operator<(const Fixed& operat) const
+{
+    return(this->getRawBits() < operat.getRawBits());
+}
+
+bool Fixed::operator>=(const Fixed& operat) const
+{
+    return(this->getRawBits() >= operat.getRawBits());
+}
+
+bool Fixed::operator<=(const Fixed& operat) const
+{
+    return(this->getRawBits() <= operat.getRawBits());
+}
+
+bool Fixed::operator==(const Fixed& operat) const
+{
+    return(this->getRawBits() == operat.getRawBits());
+}
+
+bool Fixed::operator!=(const Fixed& operat) const
+{
+    return(this->getRawBits() != operat.getRawBits());
+}
+
+Fixed operator+(const Fixed& operat) const
+{
+    return Fixed((this->getRawBits() + operat.getRawBits()));
+}
+
+Fixed operator-(const Fixed& operat) const
+{
+    return Fixed((this->getRawBits() - operat.getRawBits()));
+}
+
+Fixed operator*(const Fixed& operat) const
+{
+    return Fixed((this->getRawBits() * operat.getRawBits()));
+}
+
+Fixed operator/(const Fixed& operat) const
+{
+    return Fixed((this->getRawBits() / operat.getRawBits()));
 }
 

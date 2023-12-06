@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 15:38:33 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/06 10:11:57 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/06 13:11:40 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/06 14:54:22 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ class Fixed{
         void setRawBits( int const raw );
         float toFloat( void ) const;
         int toInt( void ) const;
+        bool operator>(const Fixed& operat) const;
+        bool operator<(const Fixed& operat)  const;
+        bool operator>=(const Fixed& operat) const;
+        bool operator<=(const Fixed& operat) const;
+        bool operator==(const Fixed& operat) const;
+        bool operator!=(const Fixed& operat) const;
+        Fixed operator+(const Fixed& operat) const;
+        Fixed operator-(const Fixed& operat) const;
+        Fixed operator*(const Fixed& operat) const;
+        Fixed operator/(const Fixed& operat) const;
+        
 };
 std::ostream & operator<<(std::ostream &output, const Fixed& operat);
-

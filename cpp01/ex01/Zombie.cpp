@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 13:44:55 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/28 13:55:16 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:53:13 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ void Zombie::announce( void ){
 
 Zombie::~Zombie(void)
 {
-    
+    std::cout << this->name << " was destroyed ." << std::endl;
 }
 
-Zombie::Zombie(void)
-{
-    
+Zombie::Zombie(void){
 }

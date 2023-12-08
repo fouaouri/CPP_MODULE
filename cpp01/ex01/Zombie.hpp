@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 13:45:06 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/28 14:50:31 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:47:47 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Zombie{
 	private :
 		std::string name;
 	public :
-        void getName(Zombie z, std::string name);
+        void setName(Zombie z, std::string name);
 		void announce( void );
 		Zombie(void);
 		Zombie(std::string n);

@@ -5,18 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 13:44:51 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/08 16:53:31 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/08 17:01:49 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/08 17:02:05 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-
-int main()
+int main(int ac, char **av)
 {
-    Zombie *z1;
-    z1 = zombieHorde(2, "Titim");
-    delete [] (z1);
-    return(0);
+    Harl H;
+    std::string a(av[1]);
+    if (ac == 2)
+        H.complain(a);
+    else
+        std::cout << "The number of arguments must be one!!" << std::endl;
 }

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 13:44:51 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/08 16:53:31 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/08 17:01:44 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/08 17:01:46 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
+#include <iostream>
+#include <cstring>
 
-int main()
-{
-    Zombie *z1;
-    z1 = zombieHorde(2, "Titim");
-    delete [] (z1);
-    return(0);
-}
+class Harl{
+    private :
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
+    public:
+        void complain(std::string level);
+};

@@ -1,6 +1,6 @@
 src = main.cpp Zombie.cpp zomvieHorde.cpp
 O_files = $(src:.cpp=.o)
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3 -std=c++98
 CXX = c++
 NAME = Moar_brainz
 

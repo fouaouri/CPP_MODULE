@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 13:44:51 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/08 16:53:31 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/08 16:57:13 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/08 16:57:35 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-
-int main()
-{
-    Zombie *z1;
-    z1 = zombieHorde(2, "Titim");
-    delete [] (z1);
-    return(0);
-}
+#include <iostream>
+#include <fstream>

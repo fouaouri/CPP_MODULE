@@ -6,14 +6,11 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:15:26 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/01 20:29:43 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/08 16:57:53 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <fstream>
-
-//I need to add a header file ............
+#include "replace.hpp"
 
 void replace(std::ifstream *file, std::ofstream *newFile, char **av)
 {

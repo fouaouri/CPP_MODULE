@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 13:44:51 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/08 16:53:31 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/08 17:43:42 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 int main()
 {
     Zombie *z1;
-    z1 = zombieHorde(2, "Titim");
+    int N = 10;
+    z1 = zombieHorde(N, "Titim");
     delete [] (z1);
     return(0);
 }

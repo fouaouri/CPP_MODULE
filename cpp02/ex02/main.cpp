@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 13:12:00 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/07 13:44:47 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/13 17:50:13 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/13 19:52:15 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void )
-{
+int main( void ) {
     Fixed a;
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
     std::cout << a << std::endl;

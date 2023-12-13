@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 15:38:33 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/13 13:50:26 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/13 16:22:22 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/13 19:53:50 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Fixed{
         static const int    fractional = 8;
     public :
         Fixed();
-        Fixed(const int intgr);
-        Fixed(const float floating);
+        Fixed(const int Integer);
+        Fixed(const float Float);
         Fixed(const Fixed& copy);
         Fixed & operator=(const Fixed& operat);
         ~Fixed();
@@ -30,5 +30,6 @@ class Fixed{
         void setRawBits( int const raw );
         float toFloat( void ) const;
         int toInt( void ) const;
+        
 };
-std::ostream& operator<<(std::ostream &output, const Fixed& operat);
+std::ostream &operator<<(std::ostream &out,const Fixed &overloaded);

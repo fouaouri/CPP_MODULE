@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:15:26 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/08 16:57:53 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:28:05 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void replace(std::ifstream *file, std::ofstream *newFile, char **av)
 {
 	std::string line;
 	std::string a(av[2]), b(av[3]);
+	if(a.empty() || b.empty())
+		return;
 	while(std::getline(*file, line))
 	{
-		std::cout << "hello" << std::endl;
 		size_t pos = 0, i = 0;
 		while((pos = line.find(av[2], pos)) != std::string::npos)
 		{

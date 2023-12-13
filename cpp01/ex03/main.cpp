@@ -6,13 +6,14 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 15:15:23 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/11/30 12:49:46 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:23:12 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 #include "HumanB.hpp"
 #include "HumanA.hpp"
+
 int main()
 {
     {
@@ -23,7 +24,7 @@ int main()
         bob.attack();
     }
     {
-        Weapon club = Weapon();
+        Weapon club = Weapon("0021");
         HumanB jim("Jim");
         jim.setWeapon(club);
         jim.attack();

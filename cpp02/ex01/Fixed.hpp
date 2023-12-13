@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:38:33 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/06 10:11:57 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/13 13:50:26 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ class Fixed{
         float toFloat( void ) const;
         int toInt( void ) const;
 };
-std::ostream & operator<<(std::ostream &output, const Fixed& operat);
-
+std::ostream& operator<<(std::ostream &output, const Fixed& operat);

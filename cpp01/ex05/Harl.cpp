@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:49:19 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/01 21:57:05 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:39:04 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,10 @@ void Harl::complain(std::string level)
     if(i < 4)
         (this->*pointer_fun[i])();
     
+}
+
+Harl::Harl(){ 
+}
+
+Harl::~Harl(){
 }

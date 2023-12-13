@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:30:31 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/04 15:37:18 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/13 13:13:24 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Fixed &Fixed::operator=(const Fixed &operat)
         this->store = operat.getRawBits();
     return *this;
 }
+
 Fixed::~Fixed()
 {
     std::cout << "Destractor called" << std::endl;

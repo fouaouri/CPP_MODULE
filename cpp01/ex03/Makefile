@@ -1,6 +1,6 @@
 src = main.cpp HumanA.cpp Weapon.cpp HumanB.cpp
 O_files = $(src:.cpp=.o)
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -fsanitize=address -Wall -Wextra -Werror -std=c++98
 CXX = c++
 NAME = Weapon
 

@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:49:15 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/01 21:44:55 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/09 14:21:54 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ class Harl{
         void warning( void );
         void error( void );
     public:
+        Harl( void );
+        ~Harl( void );
         void complain(std::string level);
 };

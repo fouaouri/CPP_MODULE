@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 13:11:28 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/07 13:49:19 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/13 16:12:48 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ Fixed::Fixed(const float floating) : store((int)( floating * (1 << fractional)))
 
 Fixed::Fixed( const Fixed &copy )
 {
-    this->store = copy.getRawBits();
+    //this->store = copy.getRawBits();
+    *this = copy;
 }
 
 Fixed &Fixed::operator=( const Fixed &operat )

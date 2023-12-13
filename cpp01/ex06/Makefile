@@ -2,7 +2,7 @@ src = main.cpp Harl.cpp
 
 
 O_files = $(src:.cpp=.o)
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 
+CXXFLAGS = -fsanitize=address -g3 -Wall -Wextra -Werror -std=c++98 
 CXX = c++
 NAME = harlFilter
 

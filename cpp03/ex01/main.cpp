@@ -5,22 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:50:13 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/14 21:59:07 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/15 16:12:48 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/15 18:51:01 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-    return 0;
+int main()
+{
+    ClapTrap clap("Titim");
+    ScavTrap scav("tom");
+    clap.attack("target");
+    clap.takeDamage(2);
+    clap.beRepaired(2);
 }

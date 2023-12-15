@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:50:13 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/14 21:59:07 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/15 16:16:30 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/15 18:50:36 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#pragma once
+#include "ClapTrap.hpp"
 
-int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-    return 0;
-}
+class ScavTrap : public ClapTrap{
+    public :
+        ScavTrap(std::string name);
+        ~ScavTrap();
+        void attack(const std::string& target);
+        void guardGate();
+};

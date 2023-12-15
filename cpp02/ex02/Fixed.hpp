@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 17:50:38 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/13 19:37:25 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/14 22:00:16 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <cmath>
 
 class Fixed{
-    private :
+    public :
         int                 store;
         static const int    fractional = 8;
     public :

@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 16:16:54 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 18:54:20 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/16 18:52:40 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/16 18:53:49 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-// #include "ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
     this->Hit_points = 100;

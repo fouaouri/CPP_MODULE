@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 16:16:54 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 18:54:20 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/16 18:52:32 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/16 19:00:57 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-// #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap() {
+FragTrap::FragTrap() : ClapTrap() {
     this->Hit_points = 100;
-    this->Ene_points = 50;
-    this->Att_damage = 20;
-    this->name = "ScavTrap";
-    std::cout << "ScavTrap default." << std::endl;
+    this->Ene_points = 100;
+    this->Att_damage = 30;
+    this->name = "FragTrap";
+    std::cout << "FragTrap default." << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name):ClapTrap(name){
+FragTrap::FragTrap(std::string name):ClapTrap(name){
     this->Hit_points = 100;
-    this->Ene_points = 50;
-    this->Att_damage = 20;
+    this->Ene_points = 100;
+    this->Att_damage = 30;
     std::cout << this->name << " was created." << std::endl;
 }
 
-void ScavTrap::attack(const std::string& target){
+void FragTrap::attack(const std::string& target){
     std::cout << this->name << " attacks " << target << ", causing ";
     std::cout << this->Att_damage << " points of damage !" << std::endl;
 }
 
-void ScavTrap::guardGate()
+void FragTrap:: highFivesGuys()
 {
-    std::cout << this->name << " is now in Gate keeper mode ." << std::endl;
+    std::cout << this->name << " is giving you a high five ." << std::endl;
 }
 
-ScavTrap::~ScavTrap(){
-    std::cout << "ScavTrap was destroyed ." << std::endl;
+FragTrap::~FragTrap(){
+    std::cout << "FragTrap was destroyed ." << std::endl;
 }

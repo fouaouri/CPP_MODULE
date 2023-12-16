@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 15:25:11 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 16:29:09 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/16 18:52:29 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/16 21:59:01 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 #include <iostream>
 
-class ClapTrap{
-    private :
+class ClapTrap
+{
+    protected:
         std::string name;
         int Hit_points;
         int Ene_points;
         int Att_damage;
-    public :
-        void attack(const std::string& target);
+
+    public:
+        void attack(const std::string &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
         ClapTrap();

@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 18:52:29 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 18:53:30 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/17 15:14:53 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     ClapTrap();
+    ClapTrap(const ClapTrap& copy);
+    ClapTrap & operator=(const ClapTrap& operat);
     ClapTrap(std::string name);
     ~ClapTrap();
 };

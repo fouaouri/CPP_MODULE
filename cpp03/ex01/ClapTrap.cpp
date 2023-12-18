@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:13:25 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 18:46:47 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/17 17:52:00 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,26 @@
 
 ClapTrap::ClapTrap() : Hit_points(10), Ene_points(10), Att_damage(0){
     this->name = "ClapTrap";
-    std::cout << "Claptrap defailt" << std::endl;
-
+    std::cout << "Claptrap default" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : Hit_points(10), Ene_points(10), Att_damage(0){
     this->name = name;
-    std::cout << this->name << " was created." << std::endl;
+    std::cout << this->name << " is a ClapTrap that created." << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+    std::cout << "Copy constructor called" << std::endl;
+    this->name = copy.name;
+}
+
+ClapTrap & ClapTrap::operator=(const ClapTrap &operat)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &operat)
+        this->name = operat.name;
+    return *this;
 }
 
 void ClapTrap::attack(const std::string& target){

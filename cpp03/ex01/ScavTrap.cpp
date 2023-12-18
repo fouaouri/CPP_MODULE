@@ -6,12 +6,11 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:16:54 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 18:54:20 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/17 15:12:27 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-// #include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
     this->Hit_points = 100;

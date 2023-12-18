@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 18:52:34 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 23:33:11 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/17 18:37:59 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/18 00:30:45 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap{
+#include<iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : public Animal{
+    private :
+        Brain *brain;
     public :
-        FragTrap();
-        FragTrap(const FragTrap& copy);
-        FragTrap & operator=(const FragTrap& operat);
-        FragTrap(std::string name);
-        ~FragTrap();
-        void attack(const std::string& target);
-        void highFivesGuys(void);
+        Dog();
+        Dog(Dog const &copy);
+        Dog & operator=(Dog const &operat);
+        std::string getType( void ) const;
+        void makeSound( void ) const;
+        ~Dog();    
 };

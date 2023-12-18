@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 18:52:37 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 22:44:16 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/18 18:59:24 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,14 @@
 
 int main()
 {
-    ClapTrap clap("Titim");
-    ScavTrap scav("Tom");
+    ClapTrap clap("Claap");
+    ScavTrap scav("Scav");
     FragTrap frag("Frag");
     DiamondTrap diam("diamond");
-    clap.attack("target");
-    clap.takeDamage(2);
-    clap.beRepaired(2);
-    diam.ScavTrap::attack("target");
-    // scav.attack("target");
-    // scav.guardGate();
-    // scav.takeDamage(2);
-    // scav.beRepaired(2);
-    // frag.attack("target");
-    // frag.highFivesGuys();
-    // frag.takeDamage(2);
-    // frag.beRepaired(2);
+    diam.whoAmI();
+    diam.attack("target");
+    // diam.beRepaired(3);
+    // diam.takeDamage(2);
+    // diam.highFivesGuys();
+    // diam.guardGate();
 }

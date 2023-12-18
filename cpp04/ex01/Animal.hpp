@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 18:52:34 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/16 23:33:11 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/17 18:29:02 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/17 23:40:08 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap{
+#include <iostream>
+
+class Animal{
+    protected :
+        std::string type;
     public :
-        FragTrap();
-        FragTrap(const FragTrap& copy);
-        FragTrap & operator=(const FragTrap& operat);
-        FragTrap(std::string name);
-        ~FragTrap();
-        void attack(const std::string& target);
-        void highFivesGuys(void);
+        Animal();
+        Animal(Animal const &copy);
+        Animal & operator=(Animal const &operat);
+        std::string getType( void ) const;
+        virtual void makeSound( void ) const;
+        virtual~Animal();
 };

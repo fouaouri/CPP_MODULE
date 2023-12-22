@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:29:02 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/17 23:40:08 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/20 01:15:43 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ class Animal{
         Animal(Animal const &copy);
         Animal & operator=(Animal const &operat);
         std::string getType( void ) const;
-        void change();
-        std::string getType();
-        virtual void makeSound( void ) const;
+        virtual void makeSound( void ) const = 0;
         virtual~Animal();
 };

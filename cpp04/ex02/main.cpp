@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:28:21 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/22 02:49:49 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/20 00:55:06 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,6 @@
 #include "WrongAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-
-void Animal::change(){
-    this->type = "hey";
-}
-
-std::string Animal::getType()
-{
-    return this->type;
-}
 
 int main()
 {

@@ -1,52 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 18:41:25 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/20 01:14:33 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/17 18:41:47 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/17 23:42:13 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat(){
-    this->type = "Cat";
-    this->brain = new Brain;
-    std::cout << "Cat default constractor ." << std::endl;
+Animal::Animal(){
+    this->type = "Animal";
+    std::cout << "Animal default constractor ." << std::endl;
 }
 
-Cat::Cat(const Cat &copy)
+Animal::Animal(const Animal &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    brain = NULL;
-    *this = copy;
+    this->type = copy.type;
 }
 
-Cat & Cat::operator=(const Cat &operat)
+Animal & Animal::operator=(const Animal &operat)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &operat)
-    {
-        if(brain)
-            delete brain;
-        brain = new Brain(*operat.brain);
         this->type = operat.type;
-    }
     return *this;
 }
 
-std::string Cat::getType( void ) const{
+std::string Animal::getType( void ) const{
     return(this->type);
 }
 
-void Cat::makeSound( void ) const{
-    std::cout << "this Cat make sound ." << std::endl;
+void Animal::makeSound( void ) const{
+    std::cout <<  "Animal make sound ." << std::endl;
 }
 
-Cat::~Cat(){
-    std::cout << "Cat destroyed ." << std::endl;
-    delete brain;
+Animal::~Animal(){
+    std::cout << "Animal destroyed ." << std::endl;
 }

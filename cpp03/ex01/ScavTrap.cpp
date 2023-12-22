@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:16:54 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/17 15:12:27 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/19 23:51:21 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,14 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name){
 }
 
 void ScavTrap::attack(const std::string& target){
-    std::cout << this->name << " attacks " << target << ", causing ";
-    std::cout << this->Att_damage << " points of damage !" << std::endl;
+    if(Hit_points  > 0 && Ene_points > 0)
+    {
+        std::cout << this->name << " attacks " << target << ", causing ";
+        std::cout << this->Att_damage << " points of damage !" << std::endl;
+        Ene_points--;
+    }
+    else
+        std::cout << "the ScavTrap have no hit_points to take the damage or doesnt have energy ." << std::endl;
 }
 
 void ScavTrap::guardGate()

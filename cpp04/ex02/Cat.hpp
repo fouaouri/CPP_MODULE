@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 18:29:02 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/17 23:40:08 by fouaouri         ###   ########.fr       */
+/*   Created: 2023/12/17 18:37:38 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/18 00:30:13 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
+#include<iostream>
+#include"Animal.hpp"
+#include"Brain.hpp"
 
-class Animal{
-    protected :
-        std::string type;
+class Cat : public Animal{
+    private :
+        Brain *brain;
     public :
-        Animal();
-        Animal(Animal const &copy);
-        Animal & operator=(Animal const &operat);
+        Cat();
+        Cat(Cat const &copy);
+        Cat & operator=(Cat const &operat);
         std::string getType( void ) const;
-        void change();
-        std::string getType();
-        virtual void makeSound( void ) const;
-        virtual~Animal();
+        void makeSound( void ) const;        
+        ~Cat();   
 };

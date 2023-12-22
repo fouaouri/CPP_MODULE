@@ -13,19 +13,19 @@
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(){
-    this->type = "Wrong Animal";
-    std::cout << "Wrong Animal default constractor ." << std::endl;
+    this->type = "Animal";
+    std::cout << "Animal default constractor ." << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
-    std::cout << "Wrong Animal Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     this->type = copy.type;
 }
 
 WrongAnimal & WrongAnimal::operator=(const WrongAnimal &operat)
 {
-    std::cout << "Wrong Animal Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &operat)
         this->type = operat.type;
     return *this;
@@ -40,14 +40,14 @@ void WrongAnimal::makeSound( void ) const{
 }
 
 WrongAnimal::~WrongAnimal(){
-    std::cout << "Wrong Animal destroyed ." << std::endl;
+    std::cout << "Animal destroyed ." << std::endl;
 }
 
 //*************************************************************************
 
 WrongCat::WrongCat(){
-    this->type = "Wrong Cat";
-    std::cout << "Wrong Cat default constractor ." << std::endl;
+    this->type = "Cat";
+    std::cout << "Cat default constractor ." << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &copy)
@@ -73,5 +73,5 @@ void WrongCat::makeSound( void ) const{
 }
 
 WrongCat::~WrongCat(){
-    std::cout << "Wrong Cat destroyed ." << std::endl;
+    std::cout << "Cat destroyed ." << std::endl;
 }

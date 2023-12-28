@@ -22,13 +22,11 @@ Brain::Brain(Brain &copy){
 }
 
 Brain & Brain::operator=(Brain &operat){
-    this->ideas = new std::string[100];
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < 100; i++)
         ideas[i] = operat.ideas[i];
     return *this;
 }
         
 Brain::~Brain(){
-    delete [] this->ideas;
     std::cout << "Brain destractor ." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:12:18 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/14 21:14:02 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/28 06:41:27 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed{
     public :
         Fixed();
         Fixed(const Fixed& copy);
-        Fixed & operator=(const Fixed& operat);
+        Fixed operator=(const Fixed& operat);
         ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const raw );

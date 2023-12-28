@@ -1,8 +1,8 @@
-src = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp Brain.cpp
+src = main.cpp Bureaucrat.cpp Form.cpp
 O_files = $(src:.cpp=.o)
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3 -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
 CXX = c++
-NAME = Animal
+NAME = Bureaucrat
 
 all: $(NAME)
 

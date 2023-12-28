@@ -25,7 +25,7 @@ Fixed::Fixed(const Fixed &copy)
     this->store = copy.getRawBits();
 }
 
-Fixed & Fixed::operator=(const Fixed &operat)
+Fixed Fixed::operator=(const Fixed &operat)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &operat)

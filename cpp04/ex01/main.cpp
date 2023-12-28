@@ -15,15 +15,6 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-void Animal::change(){
-    this->type = "hey";
-}
-
-std::string Animal::getType()
-{
-    return this->type;
-}
-
 int main()
 {
     const Animal* j = new Dog();

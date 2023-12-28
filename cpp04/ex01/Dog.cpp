@@ -34,7 +34,6 @@ Dog & Dog::operator=(const Dog &operat)
             delete brain;
         brain = new Brain(*operat.brain);
         this->type = operat.type;
-        
     }
     return *this;
 }

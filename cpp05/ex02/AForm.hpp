@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/29 11:24:49 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/29 16:58:35 by fouaouri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #pragma once
 
@@ -39,5 +51,6 @@ class AForm{
                     return "AForm is already signed .";
                 }                  
         };
+        void execute(Bureaucrat const & executor) const;
         ~AForm();
 };

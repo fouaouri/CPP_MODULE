@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/29 11:47:04 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/29 16:57:40 by fouaouri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AForm.hpp"
+#include <fstream>
 
 class ShrubberyCreationForm : public AForm{
     private :
@@ -8,6 +21,6 @@ class ShrubberyCreationForm : public AForm{
     ShrubberyCreationForm(std::string target);
     ShrubberyCreationForm(const ShrubberyCreationForm & copy);
     ShrubberyCreationForm & operat=(const ShrubberyCreationForm & operat);
-    void ASCII_trees( void );
+    void    Inform(std::string &target);
     virtual~ShrubberyCreationForm();
 };

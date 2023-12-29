@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/29 11:24:42 by fouaouri          #+#    #+#             */
+/*   Updated: 2023/12/29 16:58:51 by fouaouri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "AForm.hpp"
 
@@ -46,6 +57,10 @@ void    AForm::beSigned( const Bureaucrat & bur){
     if (this->s_grade < bur.getGrade())
         throw Bureaucrat::GradeTooLowException();
     this->is_sign = 1;
+}
+
+void execute(Bureaucrat const & executor) const{
+    
 }
 
 AForm::~AForm(){

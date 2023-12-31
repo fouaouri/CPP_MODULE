@@ -1,4 +1,4 @@
-src = main.cpp Bureaucrat.cpp Form.cpp
+src = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp  ShrubberyCreationForm.cpp      RobotomyRequestForm.cpp
 O_files = $(src:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
 CXX = c++

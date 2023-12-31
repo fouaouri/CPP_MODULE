@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:35 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/29 16:57:22 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/31 12:28:01 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,8 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm(){
     std::cout << "PresidentialPardonForm Default Constractor ." << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm("Presidential", 0, 0), target(target){
-    std::cout << name << " was created ." << std::endl;
-    this->is_sign = 0;
-    if(gets_Grade() < 1 || gete_Grade() < 1)
-        throw PresidentialPardonForm::GradeTooHighException();
-    else if (gets_Grade() > 25)
-        throw PresidentialPardonForm::GradeTooLowException();
-    else if (gets_Grade() > 5)
-        throw PresidentialPardonForm::GradeTooLowException();
+PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm("Presidential", 25, 5), target(target){
+
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy){
@@ -37,8 +30,16 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPar
     return *this;
 }
 
-void    PresidentialPardonForm::Inform(std::string &target){
+void  PresidentialPardonForm::Inform()const{
     std::cout << target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
+    if(this->getIs_sign() && this->gete_Grade() < executor.getGrade())
+        this->Inform();
+    else
+        throw AForm::GradeTooHighException();
+        
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(){

@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:47:14 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/29 16:57:32 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/31 12:26:49 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,8 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm(){
     std::cout << "Default Constractor ." << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string name, int s_grade, int e_grade) : AForm("Shrubbery", 0, 0){
-    std::cout << name << " was created ." << std::endl;
-    this->is_sign = 0;
-    if(gets_Grade() < 1 || gete_Grade() < 1)
-        throw ShrubberyCreationForm::GradeTooHighException();
-    else if (gets_Grade() > 145)
-        throw ShrubberyCreationForm::GradeTooLowException();
-    else if (gets_Grade() > 137)
-        throw ShrubberyCreationForm::GradeTooLowException();
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("ShForm", 145, 137){
+    this->target = target;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy){
@@ -37,29 +30,36 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreation
     return *this;
 }
 
-void    ShrubberyCreationForm::Inform(std::string &target){
-    std::string filename = target + "_shrubbery";
-    std::ofstream newFile(filename);
+void    ShrubberyCreationForm::Inform() const{
+    std::string filename = this->target + "_shrubbery";
+    std::ofstream newFile(filename.c_str());
     if(newFile.is_open())
     {
-        std::cout << "           *" << std::endl;
-        std::cout << "          * *" << std::endl;
-        std::cout << "         *   *" << std::endl;
-        std::cout << "        *     *" << std::endl;
-        std::cout << "       *       *" << std::endl;
-        std::cout << "      *         *" << std::endl;
-        std::cout << "     *           *" << std::endl;
-        std::cout << "    *             *" << std::endl;
-        std::cout << "   *               *" << std::endl;
-        std::cout << "  *                 *" << std::endl;
-        std::cout << " *                   *" << std::endl;
-        std::cout << "* * * * * * * * * * * *" << std::endl;
-        std::cout << "           | |" << std::endl;
-        std::cout << "           | |" << std::endl;
-        std::cout << "           | |" << std::endl;
+        newFile << "           *" << std::endl;
+        newFile << "          * *" << std::endl;
+        newFile << "         *   *" << std::endl;
+        newFile << "        *     *" << std::endl;
+        newFile << "       *       *" << std::endl;
+        newFile << "      *         *" << std::endl;
+        newFile << "     *           *" << std::endl;
+        newFile << "    *             *" << std::endl;
+        newFile << "   *               *" << std::endl;
+        newFile << "  *                 *" << std::endl;
+        newFile << " *                   *" << std::endl;
+        newFile << "* * * * * * * * * * * *" << std::endl;
+        newFile << "          | |" << std::endl;
+        newFile << "          | |" << std::endl;
+        newFile << "          | |" << std::endl;
     }
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(){
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
+    if(this->getIs_sign() && this->gete_Grade() < executor.getGrade())
+        Inform();
+    else
+        throw AForm::GradeTooHighException();
+}
+
+ShrubberyCreationForm::~ShrubberyCreationForm(){
     std::cout << "ShrubberyCreationForm destroyed ." << std::endl;
 }

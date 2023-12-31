@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:42 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/29 16:58:51 by fouaouri         ###   ########.fr       */
+/*   Updated: 2023/12/31 11:54:33 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ int AForm::gete_Grade() const {
     return(this->e_grade);
 }
 
+int AForm::getIs_sign() const{
+    return(this->is_sign);
+}
 AForm::AForm(const AForm &copy) : name(copy.name), s_grade(copy.s_grade), e_grade(copy.e_grade){
     *this = copy;
 }
@@ -57,10 +60,6 @@ void    AForm::beSigned( const Bureaucrat & bur){
     if (this->s_grade < bur.getGrade())
         throw Bureaucrat::GradeTooLowException();
     this->is_sign = 1;
-}
-
-void execute(Bureaucrat const & executor) const{
-    
 }
 
 AForm::~AForm(){

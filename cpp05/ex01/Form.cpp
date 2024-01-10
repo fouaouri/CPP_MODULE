@@ -30,6 +30,10 @@ int Form::gete_Grade() const {
     return(this->e_grade);
 }
 
+bool    Form::get_is_signed() const{
+    return(this->is_sign);
+}
+
 Form::Form(const Form &copy) : name(copy.name), s_grade(copy.s_grade), e_grade(copy.e_grade){
     *this = copy;
 }
@@ -40,7 +44,7 @@ Form & Form::operator=(const Form &operat){
     return *this;
 }
 
-void    Form::beSigned( const Bureaucrat & bur){
+void    Form::beSigned( const Bureaucrat & bur ){
     if (this->is_sign == 1)
         throw Form::AlreadySignedException();
     if (this->s_grade < bur.getGrade())

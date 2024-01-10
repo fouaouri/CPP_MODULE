@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 00:04:49 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 10:09:08 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:09:50 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Bureaucrat{
             public :
                 const char* what() const throw() {
                     return "The grade is too low .";
-                }           
+                }       
         };
         ~Bureaucrat();
 };

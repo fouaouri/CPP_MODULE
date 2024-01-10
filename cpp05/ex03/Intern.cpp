@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 10:20:44 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 13:58:23 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/10 18:28:15 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ AForm    *Intern::makeForm(const std::string &name, const std::string &target){
         if(str[i] == name)
         {
             std::cout << "Intern creates " << str[i] << std::endl;
+            for(int k = 0; k < 3; k++)
+            {
+                if(k != i)
+                    delete ptr[k];
+            }
             return ( ptr[i]);
         }
     }

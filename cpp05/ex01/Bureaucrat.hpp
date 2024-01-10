@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 00:04:49 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/25 00:29:08 by fouaouri         ###   ########.fr       */
+/*   Created: 2024/01/08 13:58:12 by fouaouri          #+#    #+#             */
+/*   Updated: 2024/01/08 14:37:23 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Bureaucrat{
         int getGrade() const;
         void    Increment_grade();
         void    Decrement_grade();
-        void    signForm(Form &form);
+        void    signForm(Form &form) const;
         class GradeTooHighException : public std::exception{
             public :
                 const char* what() const throw() {

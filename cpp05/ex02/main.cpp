@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 00:05:06 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/10 18:36:29 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:56:45 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "RobotomyRequestForm.hpp"
 
 int main(){
-    int grade = 10;
+    int grade = 75;
     Bureaucrat Bur("Titim", grade);
     std::cout << Bur;
     try{

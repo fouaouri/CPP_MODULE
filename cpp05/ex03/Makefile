@@ -9,11 +9,11 @@ NAME = Bureaucrat
 
 all: $(NAME)
 
-$(NAME) : $(O_files)
-	$(CXX)  $(CXXFLAGS) $(O_files) -o $(NAME)
-
 %.o: %.cpp $(HEADERS)
 	$(CXX)  $(CXXFLAGS) -c $< -o $@
+
+$(NAME) : $(O_files)
+	$(CXX)  $(CXXFLAGS) $(O_files) -o $(NAME)
 
 clean : 
 	rm -rf $(O_files)

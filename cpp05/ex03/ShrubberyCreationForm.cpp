@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:47:14 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 10:13:38 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:52:32 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy){
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm &operat){
     if(this != &operat)
+    {
+        AForm::operator=(operat);
         this->target = operat.target;
+    }
     return *this;
 }
 
@@ -54,10 +57,10 @@ void    ShrubberyCreationForm::Inform() const{
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
-    if(this->getIs_sign() && this->gete_Grade() < executor.getGrade())
+    if(this->getIs_sign() && this->gete_Grade() > executor.getGrade())
         Inform();
     else
-        throw AForm::GradeTooHighException();
+        throw AForm::GradeTooLowException();
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){

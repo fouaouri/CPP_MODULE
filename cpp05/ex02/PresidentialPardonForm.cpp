@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:35 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/10 18:26:43 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:52:58 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
     if(this->getIs_sign() && this->gete_Grade() > executor.getGrade())
         this->Inform();
     else
-        throw AForm::GradeTooHighException();
-        
+        throw AForm::GradeTooLowException();
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(){

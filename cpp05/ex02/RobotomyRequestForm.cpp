@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:33:13 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/10 18:33:27 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:51:51 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm &
 
 void    RobotomyRequestForm::Inform()const{
     srand(time(0));
-    if(rand() % 2 )
+    int a = rand() % 2;
+    if(a)
         std::cout<<this->target << " has been robotomized successfully 50 \%  of the time " <<std::endl;
     else
         std::cout<<this->target << " has been failed " <<std::endl;
@@ -45,7 +46,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
     if(this->getIs_sign() && this->gete_Grade() > executor.getGrade())
         Inform();
     else
-        throw AForm::GradeTooHighException();
+        throw AForm::GradeTooLowException();
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){

@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   cast.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 00:05:06 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/12 16:34:02 by fouaouri         ###   ########.fr       */
+/*   Created: 2024/01/13 19:56:19 by fouaouri          #+#    #+#             */
+/*   Updated: 2024/01/13 21:22:23 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include "Intern.hpp"
-#include "Bureaucrat.hpp"
+#pragma once
 
-int main(){
-    Intern ShrubberyCreationForm;
-    AForm *rrf;
-    std::string form = "ShrubberyCreationForm";
-    std::string target = "tar";
-    rrf = ShrubberyCreationForm.makeForm(form, target);
-    delete rrf;
-    return 0;
-}
+#include <iostream>
+#include <stdint.h>
+
+struct Data{
+    string str;
+    string str1;    
+};
+
+class Serializer{
+    private:
+        Serializer();
+        Serializer(const Serializer &s);
+        Serializer &operator=(const Serializer &s);
+        ~Serializer();
+    public :
+        static uintptr_t serialize(Data* ptr);
+        static Data* deserialize(uintptr_t raw);
+};

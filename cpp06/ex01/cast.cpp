@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   cast.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 00:05:06 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/12 16:34:02 by fouaouri         ###   ########.fr       */
+/*   Created: 2024/01/13 19:56:15 by fouaouri          #+#    #+#             */
+/*   Updated: 2024/01/13 21:22:55 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include "Intern.hpp"
-#include "Bureaucrat.hpp"
+#include "cast.hpp"
 
-int main(){
-    Intern ShrubberyCreationForm;
-    AForm *rrf;
-    std::string form = "ShrubberyCreationForm";
-    std::string target = "tar";
-    rrf = ShrubberyCreationForm.makeForm(form, target);
-    delete rrf;
-    return 0;
-}
+// uintptr_t Serializer::serialize(Data* ptr){
+    
+//     uintptr_t integer = reinterpret_cast<uintptr_t>(ptr);
+//     return(integer);
+    
+// }
+
+// Data* Serializer::deserialize(uintptr_t raw){
+    
+//     Data *a = reinterpret_cast<Data*>(raw);
+//     return(a);
+// }

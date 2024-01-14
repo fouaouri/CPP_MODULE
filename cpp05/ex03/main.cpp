@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 00:05:06 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 14:09:29 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/09 23:17:13 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(){
     Intern ShrubberyCreationForm;
     AForm *rrf;
-    std::string form = "ShrubberyCreationForm";
+    std::string form = "ShrubberyCreationFormm";
     std::string target = "tar";
     rrf = ShrubberyCreationForm.makeForm(form, target);
     delete rrf;

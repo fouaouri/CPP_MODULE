@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:35 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 10:13:06 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/09 23:14:43 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string target) : AForm
 
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy){
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy) : AForm(copy){
     *this = copy;
 }
 

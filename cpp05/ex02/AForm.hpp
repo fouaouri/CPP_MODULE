@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:49 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/01 09:04:31 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:30:53 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ class AForm{
             public :
                 const char* what() const throw() {
                     return "The grade is too low .";
-                }           
+                }
         };
         class AlreadySignedException : std::exception{
             public :
                 const char* what() const throw() {
                     return "AForm is already signed .";
-                }                  
+                }                
         };
         virtual void execute(Bureaucrat const & executor) const = 0;
         virtual ~AForm();

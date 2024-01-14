@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:42 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/31 11:54:33 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 16:33:40 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int AForm::gete_Grade() const {
 int AForm::getIs_sign() const{
     return(this->is_sign);
 }
+
 AForm::AForm(const AForm &copy) : name(copy.name), s_grade(copy.s_grade), e_grade(copy.e_grade){
     *this = copy;
 }

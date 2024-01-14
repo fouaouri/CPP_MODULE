@@ -6,7 +6,11 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:24:35 by fouaouri          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/01/09 23:14:43 by fouaouri         ###   ########.fr       */
+=======
+/*   Updated: 2024/01/12 15:52:18 by fouaouri         ###   ########.fr       */
+>>>>>>> 52297049e7358b69f881e2bdd35bcdfef4d385a5
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +30,10 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cop
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPardonForm &operat){
     if(this != &operat)
+    {
+        AForm::operator=(operat);
         this->target = operat.target;
+    }
     return *this;
 }
 
@@ -35,10 +42,10 @@ void  PresidentialPardonForm::Inform()const{
 }
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
-    if(this->getIs_sign() && this->gete_Grade() < executor.getGrade())
+    if(this->getIs_sign() && this->gete_Grade() > executor.getGrade())
         this->Inform();
     else
-        throw AForm::GradeTooHighException();
+        throw AForm::GradeTooLowException();
         
 }
 

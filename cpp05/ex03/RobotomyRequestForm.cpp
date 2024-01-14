@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/12 14:43:35 by fouaouri          #+#    #+#             */
+/*   Updated: 2024/01/12 16:30:02 by fouaouri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm(){
@@ -14,19 +26,27 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) : AFor
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm &operat){
     if(this != &operat)
+    {
+        AForm::operator=(operat);
         this->target = operat.target;
+    }
     return *this;
 }
 
 void    RobotomyRequestForm::Inform()const{
-    std::cout << target << " has been robotomizedsuccessfully 50\% of the time." << std::endl;
+    srand(time(0));
+    int a = rand() % 2;
+    if(a)
+        std::cout<<this->target << " has been robotomized successfully 50 \%  of the time " <<std::endl;
+    else
+        std::cout<<this->target << " has been failed " <<std::endl;
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
-    if(this->getIs_sign() && this->gete_Grade() < executor.getGrade())
+    if(this->getIs_sign() && this->gete_Grade() > executor.getGrade())
         Inform();
     else
-        throw AForm::GradeTooHighException();
+        throw AForm::GradeTooLowException();
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){

@@ -20,6 +20,7 @@ class Form{
         const std::string getName() const;
         int gets_Grade() const;
         int gete_Grade() const;
+        bool    get_is_signed() const;
         void    beSigned( const Bureaucrat & bur );
         class GradeTooHighException : public std::exception{
             public :
@@ -33,7 +34,7 @@ class Form{
                     return "The grade is too low .";
                 }           
         };
-        class AlreadySignedException : std::exception{
+        class AlreadySignedException : public std::exception{
             public :
                 const char* what() const throw() {
                     return "Form is already signed .";
@@ -41,3 +42,5 @@ class Form{
         };
         ~Form();
 };
+
+std::ostream &operator<<(std::ostream &out,const Form &overloaded);

@@ -6,7 +6,7 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 00:05:20 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/25 00:05:40 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:37:28 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void    Bureaucrat::Decrement_grade(){
         throw Bureaucrat::GradeTooLowException();
 }
 
-void    Bureaucrat::signForm(Form &form){
+void    Bureaucrat::signForm(Form &form) const {
     try{
         form.beSigned(*this);
         std::cout << this->name << " signed " << form.getName() << " ."<< std::endl;

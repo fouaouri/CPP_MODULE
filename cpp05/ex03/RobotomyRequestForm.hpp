@@ -6,11 +6,12 @@
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 11:46:53 by fouaouri          #+#    #+#             */
-/*   Updated: 2023/12/31 12:03:38 by fouaouri         ###   ########.fr       */
+/*   Updated: 2024/01/12 16:29:38 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
+#include <cmath>
 
 class RobotomyRequestForm : public AForm{
     private :

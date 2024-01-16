@@ -5,23 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fouaouri <fouaouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 19:56:19 by fouaouri          #+#    #+#             */
-/*   Updated: 2024/01/15 00:06:39 by fouaouri         ###   ########.fr       */
+/*   Created: 2024/01/14 23:40:17 by fouaouri          #+#    #+#             */
+/*   Updated: 2024/01/14 23:40:51 by fouaouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
 #include <iostream>
 #include <stdint.h>
+#include <cmath>
 
-struct Data
-{
-    std::string str1;
-    std::string str2;
+class Base {
+    public :
+        virtual ~Base(){
+            
+        };
 };
 
-class  Serializer{
-    public:
-        static uintptr_t serialize(Data* ptr);
-        static Data* deserialize(uintptr_t raw);
+class A : public Base{
+    public :
+        ~A(){
+
+        };
+};
+
+class B : public Base{
+    public :
+        ~B(){
+
+        };
+};
+
+class C : public Base{
+    public :
+        ~C(){
+
+        };
 };

@@ -1,9 +1,9 @@
-src = main.cpp
+src = cast.cpp
 O_files = $(src:.cpp=.o)
-HEADERS = Bureaucrat.hpp
+HEADERS = cast.hpp
 CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
 CXX = c++
-NAME = raw
+NAME = Serialization
 
 all: $(NAME)
 

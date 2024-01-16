@@ -1,14 +1,33 @@
 #include "template.hpp"
 
-template <typename T>
-void print(T a){
-    std::cout << a << std::endl;
+class Awesome
+{
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
 }
 
-int main(){
-    int arr[5] = {2, 1, 8, 15, 0};
-    std::string str[2] = {"Hello World", "Titim"};
-    iter(arr, 5, print);
-    iter(str, 2, print);
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
 
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
+
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
+
+  return 0;
 }

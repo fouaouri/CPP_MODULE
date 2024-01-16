@@ -1,11 +1,14 @@
 #include "template.hpp"
 
 int main(){
-    Array <int> arr(5);
-    for(int i = 0; i < (int)arr.len; i++)
-        arr.arr[i] = i;
+    Array <int> arr;
+    // for(int i = 0; i < 5; i++)
+    //     arr[i] = i;
+    Array <int> arr1(arr);
     try{
-        std::cout << arr.arr[3] << std::endl;
+        std::cout << arr[0] << std::endl;
+        
+        std::cout << arr[30] << std::endl;
     }
     catch(std::exception &e)
     {

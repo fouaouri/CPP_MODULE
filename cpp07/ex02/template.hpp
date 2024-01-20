@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cmath>
+
 
 template <typename T>
 class Array {
@@ -24,7 +26,6 @@ class Array {
             return(*this);
         }
         T &operator[](unsigned int n) const{
-            std::cout << "hey" << std::endl;
                 if(n >= this->len)
                     throw Array::OutofBounds();
                 return this->arr[n];

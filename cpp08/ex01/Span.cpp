@@ -4,13 +4,13 @@ Span::Span(unsigned int N) : N(N), arr(std::vector<int>()){
 
 }
 
-// Span::Span(Span &copy){
-//     *this = copy;
-// }
+Span::Span(const Span &copy){
+    *this = copy;
+}
 
-Span & Span::operator=(Span &operat){
-    operat.N = this->N;
-    operat.arr = this->arr;
+Span & Span::operator=(const Span &operat){
+    this->N = operat.N ;
+     this->arr =operat.arr ;
     return(*this);
 }
 

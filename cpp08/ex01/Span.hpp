@@ -12,8 +12,8 @@ class Span{
     public :
         Span();
         Span(unsigned int N);
-        // Span(Span &copy);
-        Span & operator=(Span &operat);
+        Span(const Span &copy);
+        Span & operator=(const Span &operat);
         unsigned int getN() const;
         void addNumber(unsigned int a);
         unsigned int shortestSpan();

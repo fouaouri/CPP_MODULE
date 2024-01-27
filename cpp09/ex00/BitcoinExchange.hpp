@@ -5,23 +5,10 @@
 #include <map>
 #include <algorithm>
 #include <sstream>
-#include <string>
-#include <cstdlib>
-// typedef struct btc{
-//     std::string *date;
-//     std::string *value;
-//     int vl;
-//     int year;
-//     int month;
-//     int day;
-// }t_btc;
+#include <iomanip>
+#include <cstring>
 
-class Bitcoin{
-    public:
-        std::string date;
-        int value;
-};
-
-void parce_input(std::ifstream *infile, std::map<std::string, int>file);
-void fill_the_map(std::ifstream *csvfile, std::map<std::string, int>csv);
-// void    parce_input(ifstream *infile);
+void    check_value(std::string val);
+void   parse_value(std::string val, float *value);
+void parce_input(std::ifstream *infile, std::multimap<std::string, float>*csv);
+void fill_the_map(std::ifstream *csvfile, std::multimap<std::string, float>*csv);

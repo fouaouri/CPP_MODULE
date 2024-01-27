@@ -9,9 +9,8 @@ int main(){
     std::vector<int> tabb;
     for(int i = 0; i < (int)str.length(); i++)
         tabb.push_back(str[i]);
-    int b = 0;
+    int b = 4;
     int c = 'h';
     easyfind(tab, b);
     easyfind(tabb, c);
-
 }

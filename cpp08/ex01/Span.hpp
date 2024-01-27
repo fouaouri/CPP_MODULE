@@ -10,6 +10,7 @@ class Span{
         unsigned int N;
         std::vector<int> arr;
     public :
+        int flag;
         Span();
         Span(unsigned int N);
         Span(const Span &copy);

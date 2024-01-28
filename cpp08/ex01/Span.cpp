@@ -29,8 +29,14 @@ unsigned int Span::shortestSpan(){
         std::cout << "Error : empty vector ." << std::endl;
         exit(1);
     }
+    else if(this->flag == 1)
+    {
+        std::cout << "Error : u need to to add more elements  ." << std::endl;
+        exit(1);
+    }
     std::sort(this->arr.begin(), this->arr.end());
     std::vector<int> arrr;
+    std::cout << this->flag << std::endl;
     for(int i = 0; i < this->flag; i++)
         arrr.push_back(abs(this->arr[i + 1] - this->arr[i]));
     std::vector<int>::iterator out = std::min_element(arrr.begin(), arrr.end());
@@ -41,6 +47,11 @@ unsigned int Span::longestSpan(){
     if(arr.empty())
     {
         std::cout << "Error : empty vector ." << std::endl;
+        exit(1);
+    }
+    else if(this->flag == 1)
+    {
+        std::cout << "Error : u need to to add more elements  ." << std::endl;
         exit(1);
     }
     unsigned int out = 0;
